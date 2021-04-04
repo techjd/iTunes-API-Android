@@ -1,11 +1,14 @@
 package com.techjd.itunesapi.di
 
+import android.app.Application
 import android.content.Context
+import androidx.room.Room
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.techjd.itunesapi.R
 import com.techjd.itunesapi.api.iTunesApi
+import com.techjd.itunesapi.data.artists.ArtistsDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -43,5 +46,13 @@ object AppModule {
                 .error(R.drawable.ic_image)
                 .diskCacheStrategy(DiskCacheStrategy.DATA)
         )
+
+    @Provides
+    @Singleton
+    fun provideDatabase(app: Application): ArtistsDatabase =
+        Room.databaseBuilder(app, ArtistsDatabase::class.java, "artists_database")
+            .allowMainThreadQueries()
+            .build()
+
 
 }

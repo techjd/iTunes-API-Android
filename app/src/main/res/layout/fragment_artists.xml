@@ -16,20 +16,21 @@
         tools:context=".ui.artists.ArtistsFragment">
 
 
+
         <SearchView
-            android:queryHint="Search Artist ( Default : Weeknd )"
-            android:id="@+id/searchView"
+            android:id="@+id/searchViewOnline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
-            android:iconifiedByDefault="false" />
+            android:iconifiedByDefault="false"
+            android:queryHint="Search Artist ( Default : One Direction )" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/searchView"
-            android:layout_marginTop="3dp" />
+
+            android:layout_marginTop="60dp" />
 
         <ProgressBar
             android:id="@+id/progress_bar"
@@ -46,7 +47,7 @@
             android:layout_above="@+id/retry"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
-            android:text="No Internet Connection ! Showing Cached Results"
+            android:text="No Internet Connection !"
             android:textColor="@color/black"
             android:visibility="gone"
             tools:visibility="visible" />
@@ -66,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
-            android:text="No Internet Connection ! Showing Cached Results"
+            android:text="No Internet Connection!"
             android:textColor="@color/black"
             android:visibility="gone"
             tools:visibility="visible" />

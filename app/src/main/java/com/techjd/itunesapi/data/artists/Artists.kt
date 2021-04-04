@@ -1,6 +1,7 @@
 package com.techjd.itunesapi.data.artists
 
-class Artists(
+
+data class Artists(
     val trackId: String,
     val artistName: String,
     val collectionName: String,

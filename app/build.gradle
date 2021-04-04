@@ -68,9 +68,18 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     kapt "com.github.bumptech.glide:compiler:$glideVersion"
 
+    // Couroutines̥
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
 
-    // Paging 3
-    implementation "androidx.paging:paging-runtime:$pagingVersion"
+    // Room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.0"
+
+
 }
 
 kapt {

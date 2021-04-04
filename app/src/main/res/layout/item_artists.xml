@@ -1,50 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_margin="8dp"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/artistImage" />
+    <RelativeLayout
+        android:background="@drawable/artists_border"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:layout_width="match_parent"
+
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:textSize="20dp"
-                android:textColor="@color/black"
-                android:text="Ariana Grande and The Weeknd"
-                android:id="@+id/artistName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/artistImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp" />
 
-            <TextView
-                android:textSize="18dp"
-                android:textColor="@color/black"
-                android:text="My Everything (Deluxe)"
-                android:id="@+id/collectionName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <LinearLayout
 
-            <TextView
-                android:textSize="18dp"
-                android:textColor="@color/black"
-                android:text="Love Me Harder"
-                android:id="@+id/trackName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/artistName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ariana Grande and The Weeknd"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/collectionName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My Everything (Deluxe)"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/trackName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Love Me Harder"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
-</RelativeLayout>
+    </RelativeLayout>
+</layout>
